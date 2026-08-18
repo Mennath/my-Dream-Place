@@ -105,7 +105,7 @@ header {
 
 .home {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(140, 140, 140, 0.5)),
-        url(../images/2d.jpg);
+        url(../images/IMG_9257.jpeg);
     background-repeat: round;
     width: 100%;
     height: 570px;
@@ -329,7 +329,7 @@ h2 {
 
         }
 
-        /* p {
+        p {
             margin-bottom: 200px;
             font-family: Barlow;
             font-weight: 400;
@@ -341,14 +341,14 @@ h2 {
             vertical-align: middle;
             color: rgba(37, 41, 44, 1);
 
-        } */
+        }
     }
 }
 
 .Activities {
     width: 100%;
     height: 400px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 
     h3 {
         font-family: Barlow;
@@ -383,6 +383,7 @@ h2 {
 }
 
 .Activities1 {
+    width: 100%;
 
     img {
         width: 95%;
@@ -437,7 +438,7 @@ h2 {
     }
 
     .About3 {
-        background-image: url(../images/3c.jpg);
+        background-image: url(../images/IMG_9260.jpeg);
         background-repeat: round;
         width: 35%;
         height: 270px;
@@ -445,7 +446,7 @@ h2 {
     }
 
     .About4 {
-        background-image: url(../images/7f.jpg);
+        background-image: url(../images/IMG_9261.jpeg);
         background-repeat: round;
         width: 35%;
         height: 270px;
@@ -532,7 +533,7 @@ h2 {
         }
         .contactonee{
             display: flex;
-             height: 100px;
+             /* height: 100px; */
             width: 90%;
 
         }
@@ -684,16 +685,46 @@ padding-left: 1px;
     
     
 
-@media (max-width:600px) {
-    @media (max-width: 600px) {
+@media (max-width: 600px) {
 
-    /* ---------- HEADER ---------- */
+    /* =========================
+       GLOBAL MOBILE FIX
+    ========================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    svg {
+        max-width: 100%;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 10;
+        z-index: 100;
         width: 100%;
         height: 60px;
         margin: 0;
@@ -717,41 +748,42 @@ padding-left: 1px;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 20;
+        z-index: 101;
+
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+
         width: 100%;
         height: 60px;
+
         padding: 0 20px;
     }
 
-    .header2 .logoo:nth-child(1) {
+    .header2 .logoo {
         display: flex;
         align-items: center;
+        gap: 5px;
         width: auto;
         margin: 0;
-        gap: 5px;
-        color: #fff;
     }
 
-    .header2 .logoo:nth-child(1) svg {
+    .header2 .logoo svg {
         color: rgba(21, 118, 214, 1);
     }
 
-    .header2 .logoo:nth-child(2) {
-        width: auto;
-        margin: 0;
-        color: #fff;
-    }
 
-
-    /* ---------- HERO ---------- */
+    /* =========================
+       HERO
+    ========================= */
 
     .home {
+        position: relative;
+
         width: 100%;
         min-height: 650px;
         height: auto;
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -759,170 +791,231 @@ padding-left: 1px;
 
     .img {
         position: absolute;
+
         left: 0;
         bottom: 180px;
+
         width: 100%;
-        height: auto;
+
         margin: 0;
         padding: 0 20px;
+
         text-align: left;
     }
 
     .img h2 {
-        margin: 0 0 10px;
-        font-size: 28px;
+        margin: 0 0 12px;
+
+        font-size: 27px;
         line-height: 1.2;
+
         text-align: left;
     }
 
     .img p {
         margin: 0;
-        font-size: 17px;
-        line-height: 1.4;
+
+        font-size: 16px;
+        line-height: 1.5;
+
         text-align: left;
     }
 
 
-    /* ---------- SEARCH BOX ---------- */
+    /* =========================
+       SEARCH BOX
+    ========================= */
 
     .img2 {
         position: absolute;
+
         left: 3%;
-        bottom: -90px;
+        bottom: -100px;
+
         width: 94%;
         height: auto;
         min-height: 170px;
+
         margin: 0;
         padding: 10px;
+
         display: grid;
         grid-template-columns: 1fr 1fr;
+
         gap: 8px;
+
         border-radius: 8px;
     }
 
     .imgg {
         width: 100%;
         height: 45px;
+
         margin: 0;
         padding: 10px;
+
         display: flex;
         align-items: center;
-        gap: 7px;
+
+        gap: 6px;
+
+        overflow: hidden;
+    }
+
+    .imgg svg {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
     }
 
     .imgg h5 {
-        font-size: 13px;
+        font-size: 12px;
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .img2 button {
+        grid-column: 1 / -1;
+
         width: 100%;
         height: 44px;
+
         margin: 0;
-        grid-column: 1 / -1;
     }
 
 
-    /* ---------- CHECK / NOTICE ---------- */
+    /* =========================
+       CHECK / NOTICE
+    ========================= */
 
     .check {
         width: calc(100% - 32px);
         min-height: 80px;
         height: auto;
+
         margin: 120px 16px 0;
         padding: 15px;
+
         display: flex;
         align-items: flex-start;
+
+        border-radius: 8px;
     }
 
     .check svg {
         flex-shrink: 0;
+
         width: 28px;
         height: 28px;
+
         margin: 2px 8px 0 0;
     }
 
     .check p {
         position: static;
+
         height: auto;
+
         margin: 0;
+
         font-size: 14px;
         line-height: 1.4;
     }
 
 
-    /* ---------- DISCOVER ---------- */
+    /* =========================
+       DISCOVER
+    ========================= */
 
     .Discover {
         width: 100%;
         height: auto;
+
         margin-top: 40px;
         padding: 0 20px;
     }
 
     .Discover h2 {
         margin: 0 0 30px;
-        font-size: 30px;
+
+        font-size: 28px;
         line-height: 1.2;
+
         text-align: center;
     }
 
     .flexy {
         display: flex;
         flex-direction: column;
+
         width: 100%;
         height: auto;
+
         gap: 35px;
     }
 
     .flexy .Discover1 {
         width: 100%;
         height: auto;
-        padding: 0;
+
         display: flex;
         flex-direction: column;
         align-items: center;
+
         gap: 12px;
+
         text-align: center;
     }
 
     .flexy .Discover1 svg {
         width: 55px;
         height: 55px;
+
         margin: 0;
     }
 
     .flexy .Discover1 h4 {
         margin: 0;
+
         font-size: 20px;
         line-height: 1.2;
     }
 
     .flexy .Discover1 p {
         position: static;
+
         margin: 0;
+
         font-size: 15px;
         line-height: 1.5;
     }
 
 
-    /* ---------- ACTIVITIES ---------- */
+    /* =========================
+       ACTIVITIES
+    ========================= */
 
     .Activities {
         width: 100%;
         height: auto;
+
         margin-top: 60px;
         padding: 0 20px;
     }
 
     .Activities h3 {
+        margin-bottom: 10px;
+
         font-size: 26px;
         line-height: 1.2;
     }
 
     .Activities p {
         position: static;
-        margin: 10px 0 20px;
+
+        margin: 0 0 20px;
+
         font-size: 15px;
         line-height: 1.5;
     }
@@ -930,8 +1023,10 @@ padding-left: 1px;
     .imagesss {
         display: flex;
         flex-direction: column;
+
         width: 100%;
         height: auto;
+
         gap: 20px;
     }
 
@@ -941,17 +1036,22 @@ padding-left: 1px;
 
     .Activities1 img {
         display: block;
+
         width: 100%;
         height: auto;
+
         border-radius: 8px;
     }
 
 
-    /* ---------- ABOUT ---------- */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .About {
         width: 100%;
         height: auto;
+
         margin-top: 50px;
         padding: 0 20px;
     }
@@ -959,61 +1059,87 @@ padding-left: 1px;
     .About1 {
         display: flex;
         flex-direction: column;
+
         width: 100%;
         height: auto;
-        margin: 0;
+
         gap: 20px;
     }
 
     .About1 .About2,
     .About1 .About3,
     .About1 .About4 {
+        position: relative;
+
         width: 100%;
         height: 250px;
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        border-radius: 8px;
     }
 
     .About1 h3 {
         margin-top: 150px;
-        padding-left: 15px;
+        padding: 0 15px;
+
         font-size: 22px;
     }
 
     .About1 p {
+        position: static;
+
+        margin: 0;
         padding: 0 15px 15px;
+
         font-size: 14px;
     }
 
 
-    /* ---------- CONTACT ---------- */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .Contact1 {
+        display: flex;
+        flex-direction: column;
         width: 100%;
         height: auto;
+
         margin-top: 60px;
         padding: 0 20px;
     }
 
     .Contact1 h2 {
+        margin-bottom: 25px;
+
         font-size: 26px;
         line-height: 1.2;
-        margin-bottom: 25px;
     }
 
     .Contact2 {
         display: flex;
         flex-direction: column;
+
         width: 100%;
         height: auto;
+
         gap: 15px;
     }
 
     .contactone,
     .Contacttwo {
+        /* display: none; */
         width: 100%;
+        height: auto;
+
         margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
         gap: 15px;
     }
 
@@ -1022,6 +1148,7 @@ padding-left: 1px;
     .contact6 {
         width: 100%;
         height: 180px;
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1030,6 +1157,7 @@ padding-left: 1px;
     .contact5 {
         width: 100%;
         height: 250px;
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1042,52 +1170,90 @@ padding-left: 1px;
 
     .contact7,
     .contact8 {
+        /* display: none; */
         width: 50%;
         height: 160px;
+
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 
 
-    /* ---------- HAPPY ---------- */
+    /* =========================
+       HAPPY
+    ========================= */
 
     .happy {
         width: 100%;
         height: auto;
+
         margin-top: 50px;
         padding: 0 20px;
+    }
+
+    .happy h3 {
+        font-size: 26px;
+        line-height: 1.3;
     }
 
     .happybig {
         display: flex;
         flex-direction: column;
+
         width: 100%;
+
         padding: 0;
+
         gap: 25px;
     }
 
     .happyone {
         width: 100%;
+
+        display: flex;
+        flex-direction: column;
         align-items: center;
+
+        gap: 10px;
+
         text-align: center;
     }
 
+    .happyone h2 {
+        font-size: 32px;
+    }
 
-    /* ---------- END ---------- */
+    .happyone p {
+        position: static;
+
+        margin: 0;
+
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+
+    /* =========================
+       END / FOOTER
+    ========================= */
 
     .end {
         width: 100%;
         height: auto;
+
         margin-top: 50px;
         padding: 0 20px;
+
         overflow: hidden;
     }
 
     .end1 {
         display: flex;
         flex-direction: column;
+
         width: 100%;
+
         gap: 20px;
     }
 
@@ -1098,36 +1264,17 @@ padding-left: 1px;
 
     .end p {
         position: static;
+
         margin: 0;
+
         font-size: 22px;
         line-height: 1.4;
     }
 
     .end button {
         width: 100%;
+        height: 44px;
+
         margin: 0;
     }
-
-
-    /* ---------- GENERAL MOBILE FIXES ---------- */
-
-    section {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    svg {
-        max-width: 100%;
-    }
-
-    button {
-        max-width: 100%;
-    }
-}
-
 }

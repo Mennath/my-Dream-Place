@@ -866,7 +866,7 @@ color: rgba(21, 118, 214, 1);
 }
 
 .footer .box-container .box {
-    flex: 1 1 25rem;
+    flex: 1 1 2rem;
     margin: 2rem;
 }
 
@@ -910,7 +910,10 @@ color: rgba(21, 118, 214, 1);
 /* .footer .credit a {
     color: var(--yellow);
 } */
+.dream{
+  margin-left: 1000px;
 
+}
 
 /* 📱 Mobile */
 @media (max-width: 768px) {
@@ -966,6 +969,10 @@ color: rgba(21, 118, 214, 1);
 
     .footer .credit {
         font-size: 1.3rem;
+    }
+
+    .dream{
+        display: none;
     }
 }
 
